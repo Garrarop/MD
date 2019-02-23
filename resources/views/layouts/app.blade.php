@@ -2,12 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>ProyectoDxBxA</title>
+    <title>MagicDreamsMC</title>
 
 
     <script src="https://use.fontawesome.com/aa145e23f2.js"></script>
@@ -25,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -35,9 +36,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                      <form class="form-inline my-2 my-lg-0" action="/resultados">
+                        <input class="form-control mr-sm-2" type="text" name='buscar' placeholder="¿Qué estas buscando?" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </form>
                     </ul>
-
+                    <ul class="navbar-nav mr-auto">
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0" href="/home">Inicio</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="https://magicdreamsmc.enjin.com/">Foro</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://mgdreamstienda.craftingstore.net/">Tienda</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="https://forge.laravel.com">Ayuda</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://MgDreamsMC.com/vota.html">Votar</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/nosotros">¿Quienes somos?</a></li>
+                        <p class="lead"></p>
+                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -55,21 +72,19 @@
                                     <a class="dropdown-item" href="/perfil/{{ Auth::user()->id }}">
                                       Perfil
                                     </a>
+                                    <p class="lead"></p>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <p class="lead"></p>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
                         @endguest
-                        <form class="form-inline my-2 my-lg-0" action="/resultados">
-                          <input class="form-control mr-sm-2" type="text" name='buscar' placeholder="¿Qué estas buscando?" aria-label="Search">
-                          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
                     </ul>
                 </div>
             </div>

@@ -4,8 +4,8 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>ProyectoDxBxA</title>
+        <link rel="shortcut icon" href="/img/icono.png">
+        <title>MagicDreams</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -86,13 +86,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Inicio</a>
-                    <a href="https://laracasts.com">Foro</a>
-                    <a href="https://laravel-news.com">Tienda</a>
-                    <a href="https://nova.laravel.com">Perfil</a>
+                    <a href="/home">Inicio</a>
+                    <a href="https://magicdreamsmc.enjin.com/">Foro</a>
+                    <a href="http://mgdreamstienda.craftingstore.net/">Tienda</a>
                     <a href="https://forge.laravel.com">Ayuda</a>
-                    <a href="https://github.com/laravel/laravel">Votar</a>
-                    <a href="https://github.com/laravel/laravel">¿Quienes somos?</a>
+                    <a href="http://MgDreamsMC.com/vota.html">Votar</a>
+                    <a href="/nosotros">¿Quienes somos?</a>
                 </div>
             </div>
         </div>
