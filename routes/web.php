@@ -14,11 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::get('/nosotros', function () {
     return view('nosotros');
 });
+Route::get('/votar', function () {
+    return view('votar');
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
+Route::get('/success', function () {
+    return view('success');
+});
+
 
 Auth::routes();
 
@@ -28,7 +38,7 @@ Route::get('/resultados', 'BusquedasController@buscar')->name('buscar');
 
 Route::get('/pruebas','PruebasController@prueba');
 
-Route::post('/postear', 'PruebasController@postear');
+Route::post('/contacto', 'PruebasController@mensaje');
 
 Route::get('/perfil/{id?}', 'UsuariosController@verPerfil')->name('Perfil');
 

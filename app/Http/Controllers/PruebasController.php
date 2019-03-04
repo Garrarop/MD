@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\posteo;
+use App\mensaje;
 
 
 class PruebasController extends Controller
@@ -13,20 +13,26 @@ class PruebasController extends Controller
       return view('prueba');
     }
 
-    public function postear(request $request)
+    public function mensaje(request $request)
     {
+      $this->validate($request,[
+        'nombre' => 'required',
+        'mail' => 'required',
+        'mensaje' => 'required|max:400'
+      ]);
+      $mensaje = new mensaje;
+      $mensaje->nombre = $request->nombre;
+      $mensaje->nick = $request->nick;
+      $mensaje->mail = $request->mail;
+      $mensaje->telefono = $request->telefono;
+      $mensaje->mensaje = $request->mensaje;
       if (Auth::check()) {
-        $this->validate($request,[
-          'publicar' => 'required|max:150|min:10'
-        ]);
-        $posteo = new Posteo;
-          $posteo->post = $request->publicar;
-          $posteo->fecha = getdate();
-          $posteo->user_id = Auth::Id();
-          $posteo->user_id2 = $request->path();
-        echo $posteo;
+        $mensaje->user_id = Auth::id();
+        $mensaje->save();
+        return redirect('/success');
       } else {
-        return redirect(route('login'));
+        $mensaje->save();
+        return redirect('/success');
       }
     }
 

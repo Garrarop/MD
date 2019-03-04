@@ -89,9 +89,9 @@
                     <a href="/home">Inicio</a>
                     <a href="https://magicdreamsmc.enjin.com/">Foro</a>
                     <a href="http://mgdreamstienda.craftingstore.net/">Tienda</a>
-                    <a href="https://forge.laravel.com">Ayuda</a>
-                    <a href="http://MgDreamsMC.com/vota.html">Votar</a>
+                    <a href="/votar">Votar</a>
                     <a href="/nosotros">¿Quienes somos?</a>
+                    <a href="/contacto">Contacto</a>
                 </div>
             </div>
         </div>

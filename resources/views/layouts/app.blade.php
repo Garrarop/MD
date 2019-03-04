@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -48,11 +48,11 @@
                         <p class="lead"></p>
                         <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://mgdreamstienda.craftingstore.net/">Tienda</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="https://forge.laravel.com">Ayuda</a></li>
-                        <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://MgDreamsMC.com/vota.html">Votar</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/votar">Votar</a></li>
                         <p class="lead"></p>
                         <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/nosotros">¿Quienes somos?</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/contacto">Contacto</a></li>
                         <p class="lead"></p>
                     </ul>
                     <!-- Right Side Of Navbar -->
@@ -89,10 +89,16 @@
                 </div>
             </div>
         </nav>
-
+        <br><br>
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+  <footer class="footer" style="background: rgba(154, 147, 164, 0.36);">
+    <div class="footer-copyright text-center py-3"><p>MagicDreams es un servidor de minecraft creado para los fans de Harry Potter. MagicDreams no está afiliado con J.K. Rowling, WizardingWorld, WarnerBross u otra entidad.</p> © 2019 Copyright:
+      <a href="#"> MagicDreamsMC</a>
+    </div>
+  </footer>
 </body>
 </html>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
