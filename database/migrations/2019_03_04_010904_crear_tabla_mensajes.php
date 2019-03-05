@@ -21,7 +21,7 @@ class CrearTablaMensajes extends Migration
          $table->string('mail',200);
          $table->string('telefono',200)->nullable();
          $table->string('mensaje',400);
-         $table->foreign('user_id')->references('id')->on('users')->nullable();
+         $table->integer('user_id')->nullable();
      });
     }
 
