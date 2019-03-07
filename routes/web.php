@@ -42,4 +42,10 @@ Route::post('/contacto', 'PruebasController@mensaje');
 
 Route::get('/perfil/{id?}', 'UsuariosController@verPerfil')->name('Perfil');
 
-Route::get('/completarPerfil','UsuariosController@completarPerfil')->name('Completar')->middleware(['auth']);;
+Route::get('/configuracion', 'UsuariosController@configuraciones')->name('config')->middleware(['auth']);
+
+Route::post('/enlazar', 'UsuariosController@enlazar')->middleware(['auth']);
+
+Route::post('/general', 'UsuariosController@general');
+
+Route::get('/completarPerfil','UsuariosController@completarPerfil')->name('Completar')->middleware(['auth']);

@@ -17,7 +17,7 @@ class CrearTablaPlayers extends Migration
             $table->increments('id');
             $table->uuid('uuid');
             $table->timestamps();
-            $table->integer('user_id');
+            $table->string('codigo');
             $table->char('nick',100);
             $table->float('galeones',8,2)->default(0);
             $table->string('historia')->nullable();
@@ -26,6 +26,7 @@ class CrearTablaPlayers extends Migration
             $table->integer('colegio')->nullable();
             $table->integer('año')->default(0);
             $table->boolean('staff')->default(0);
+            $table->boolean('enlazado')->default(0);
         });
     }
 

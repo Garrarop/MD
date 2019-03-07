@@ -6,16 +6,13 @@
     <div class="row">
         <div class="col-md-2">
             <div id="asd" class="card card-body">
-                @if ($usuario->PathImagen == null)
-                  <img src="/img/ImagenDefault.png" alt="ImagenDefault" id="ImgPerfil">
-                @else
-                   <img src="{{ $usuario->PathImagen }}" id="ImgPerfil" alt="{{ $usuario->name }}">
-                @endif
+                <img src="/uploads/{{ $usuario->PathImagen }}" alt="No" id="ImgPerfil" style="padding-bottom: 5px;">
                 <div id="prfList">
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
+                  <div class="list-group">
+                    <a href="{{ route('config') }}" class="list-group-item list-group-item-action">Config</a>
+                    <a href="#" class="list-group-item list-group-item-action">Datos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Amigos</a>
+                  </div>
                 </div>
             </div>
         </div>

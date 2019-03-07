@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class player extends Model
 {
-    //
+  protected $fillable = [
+      'nick'
+  ];
 }

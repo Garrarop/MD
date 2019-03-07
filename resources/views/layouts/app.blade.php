@@ -4,14 +4,11 @@
     <meta charset="utf-8">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../img/logo.png">
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>MagicDreamsMC</title>
-
-
-    <script src="https://use.fontawesome.com/aa145e23f2.js"></script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="/css/master.css">
@@ -27,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel fixed-top">
             <div class="container">
               <div class="media">
-                  <img src="img/logo.png" class="media-object" style="width:60px">
+                  <img src="{{ asset('img/logo.png') }}" class="media-object" style="width:60px">
               </div>
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,12 +70,19 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/perfil/{{ Auth::user()->id }}">
+                                      <i class="fa fa-btn fa-user"></i>
                                       Perfil
+                                    </a>
+                                    <p class="lead"></p>
+                                    <a class="dropdown-item" href="/configuracion">
+                                      <i class="fa fa-btn fa-cog"></i>
+                                      Configuración
                                     </a>
                                     <p class="lead"></p>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-btn fa-sign-out-alt"></i>
                                         {{ __('Logout') }}
                                     </a>
                                     <p class="lead"></p>
