@@ -7,6 +7,7 @@ use Auth;
 use App\player;
 use App\User;
 use Image;
+use App\rede;
 
 class UsuariosController extends Controller
 {
@@ -60,15 +61,19 @@ class UsuariosController extends Controller
       $user = Auth::User();
 
       if ($request->email != Auth::user()->email){
-        $this->validate($request,['email'=> 'unique:users,email',],['unique'=> 'El Email ingresado ya está en uso, por favor seleccione otro',]);
+        $this->validate($request,['email'=> 'required', 'string', 'email', 'max:255', 'unique:users',],['unique'=> 'El Email ingresado ya está en uso, por favor seleccione otro',]);
         $user->email = $request->email;
       }
       if ($request->name != Auth::user()->name){
-        $this->validate($request,['name'=> 'unique:users,email',],['unique'=> 'El  ingresado ya está en uso, por favor seleccione otro',]);
+        $this->validate($request,['name'=> 'required', 'string', 'max:255',]);
+        $user->name = $request->name;
+      }
+      if ($request->lastname != Auth::user()->lastname){
+        $this->validate($request,['lastname'=> 'required', 'string', 'max:255',]);
         $user->name = $request->name;
       }
       if ($request->pais != Auth::user()->pais){
-        $this->validate($request,['pais'=> 'unique:users,email',],['unique'=> 'El Email ingresado ya está en uso, por favor seleccione otro',]);
+        $this->validate($request,['pais'=> 'required', 'string', 'max:255',]);
         $user->pais = $request->pais;
       }
       if ($request->hasFile('img')) {
@@ -81,7 +86,11 @@ class UsuariosController extends Controller
       return redirect('configuracion');
     }
 
+    public function redes(request $request)
+    {
+      $redes = rede::where('user_id',Auth::user()->id)->firstOrFail();
 
+    }
     public function completarPerfil()
     {
       return redirect('/login');

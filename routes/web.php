@@ -48,4 +48,8 @@ Route::post('/enlazar', 'UsuariosController@enlazar')->middleware(['auth']);
 
 Route::post('/general', 'UsuariosController@general');
 
+Route::post('/redes', 'UsuariosController@redes');
+
+Route::post('/lang', 'PruebasController@lang');
+
 Route::get('/completarPerfil','UsuariosController@completarPerfil')->name('Completar')->middleware(['auth']);

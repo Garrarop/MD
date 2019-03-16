@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\mensaje;
-
+use App;
 
 class PruebasController extends Controller
 {
@@ -34,6 +34,12 @@ class PruebasController extends Controller
         $mensaje->save();
         return redirect('/success');
       }
+    }
+
+    public function lang(request $request)
+    {
+      App::setLocale($request->lang);
+      return redirect('/');
     }
 
 }

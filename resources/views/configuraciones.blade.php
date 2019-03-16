@@ -60,12 +60,17 @@
                           <input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
                         </div>
                         <div class="form-group">
-                          <label for="pwd">Contraseña:</label>
-                          <input type="text" name="password" class="form-control" id="pwd" readonly value="Proximamente... (contacte con staff)">
-                        </div>
-                        <div class="form-group">
-                          <label for="name">Nombre:</label>
-                          <input type="text" name="name" class="form-control" id="name" value="{{ Auth::user()->name }}">
+                        <label for="name">Nombre:</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="name">Nombre:</label>
+                            </div>
+                            <input type="text" class="form-control" name="name" id="name"value="{{ Auth::user()->name }}">
+                            <div class="input-group-prepend">
+                              <label for="lastname" class="input-group-text">Apellido:</label>
+                            </div>
+                            <input type="text" id="lastname" name="lastname" class="form-control">
+                          </div>
                         </div>
                         <div class="form-group">
                           <label for="name">Pais:</label>
@@ -83,43 +88,45 @@
                   </div>
                   <div id="cont" class="form-group col-md-6 collapse">
                     <ul class="list-group list-group-flush">
-                      <form action="/action_page.php">
+                      <div class="alert alert-danger">Proximamente...</div>
+                      <form action="/configuracion" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
-                          <label for="email">Email address:</label>
-                          <input type="email" class="form-control" id="email">
+                          <label for="face"><i class="fab fa-facebook"></i> Facebook:</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Facebook.com/</span>
+                            </div>
+                            <input type="text" name="face" class="form-control" readonly id="face">
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" id="pwd">
+                          <label for="insta"><i class="fab fa-instagram"></i> Instagram:</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" name="insta"class="form-control" readonly id="insta">
+                          </div>
                         </div>
-                        <div class="form-group form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Remember me
-                          </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" disable class="btn btn-primary">Guardar</button>
                       </form>
                     </ul>
                   </div>
                   <div id="seg" class="form-group col-md-6 collapse">
                     <ul class="list-group list-group-flush">
-                      <form action="/action_page.php">
+                      <div class="alert alert-danger">Proximamente...</div>
+                      <form action="/">
                         {{ csrf_field() }}
                         <div class="form-group">
-                          <label for="email">Email address:</label>
-                          <input type="email" class="form-control" id="email">
+                          <label for="pass">Nueva contraseña:</label>
+                          <input type="password" readonly class="form-control" id="pass">
                         </div>
                         <div class="form-group">
-                          <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" id="pwd">
+                          <label for="pass2">Repite Contraseña:</label>
+                          <input type="password" readonly class="form-control" id="pass2">
                         </div>
-                        <div class="form-group form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Remember me
-                          </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Cambiar</button>
                       </form>
                     </ul>
                   </div>
