@@ -12,7 +12,7 @@
               <h1 class="display-4">Vota por Magic Dreams</h1>
               <p class="lead">Para ganar grandiosas recompensas cada día</p>
               <hr class="m-y-md">
-              <p class="lead">Para canjear tu llave por un premio ve junto a <abbr title="/madriguera">Agnes</abbr> en la madriguera</p>
+              <p class="lead">Para canjear tu llave por un premio ve junto a <abbr title="/agnes">Agnes</abbr> en la madriguera</p>
             </div>
           </div>
           <h1>Enlaces</h1>

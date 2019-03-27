@@ -91,7 +91,7 @@
                             <img class=" card-img-top" width="250" src="img/staff/JefeCasaG.jpeg" alt="Ministro">
                             <h5 class="card-header bg-danger">JefeCasaG - SirJackald</h5>
                             <div class="card-body">
-                              <p class="card-text text-justify">Robin fue un justiciero en Gotham. Tras su retirada se preocupó por las artes místicas y con ello empezó a estudiar magia. Fue autodidacta. Actualmente protege el mundo mágico, es Jefe de Casa de Gryffindor y profesor de Herbologia.</p>
+                              <p class="card-text text-justify">Mago gris, legítimo rey de los Ándalos y Primeros Hombres, Protector de los Siete Reinos, Padre de Dragones, el Khalessi del Gran Mar de Hierba, el que no arde, Rompedor de Cadenas, profesor de Herbologia y Jefe de Gryffindor</p>
                             </div>
                             <div class="card-footer">
                               <button type="button" name="button" class="btn btn-outline-primary">Perfil</button>

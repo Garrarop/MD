@@ -39,7 +39,7 @@ class PruebasController extends Controller
     public function lang(request $request)
     {
       App::setLocale($request->lang);
-      return redirect('/');
+      return view('welcome');
     }
 
 }

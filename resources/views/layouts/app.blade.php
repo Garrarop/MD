@@ -35,24 +35,26 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <!--<ul class="navbar-nav mr-auto">
                       <form class="form-inline my-2 my-lg-0" action="/resultados">
                         <input class="form-control mr-sm-2" type="text" name='buscar' placeholder="¿Qué estas buscando?" aria-label="Search">
                         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                       </form>
-                    </ul>
+                    </ul> -->
                     <ul class="navbar-nav mr-auto">
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0" href="/home">Inicio</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0" href="/">{{__('Home')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="https://magicdreamsmc.enjin.com/">Foro</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="https://magicdreamsmc.enjin.com/">{{__('Forum')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://mgdreamstienda.craftingstore.net/">Tienda</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://mgdreamsmc.buycraft.net/">{{__('Shop')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/votar">Votar</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/votar">{{__('Vote')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/nosotros">¿Quienes somos?</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/nosotros">{{__('About us')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/contacto">Contacto</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/contacto">{{__('Contact')}}</a></li>
+                        <p class="lead"></p>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://play.mgdreamsmc.com:8123/#">Mapa</a></li>
                         <p class="lead"></p>
                     </ul>
                     <!-- Right Side Of Navbar -->
@@ -69,14 +71,17 @@
                                     {{ strtoupper(Auth::user()->name) }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/perfil/{{ Auth::user()->id }}">
-                                      <i class="fa fa-btn fa-user"></i>
+                                  <!--<a class="dropdown-item" disabled href="/perfil/{{ Auth::user()->id }}">-->
+                                  <a class="dropdown-item disabled" disabled href="#">
+                                    <i class="fa fa-btn fa-user"></i>
                                       Perfil
+                                      <span class="badge badge-info">Proximamente</span>
                                     </a>
                                     <p class="lead"></p>
-                                    <a class="dropdown-item" href="/configuracion">
+                                    <a class="dropdown-item disabled" disabled href="#">
                                       <i class="fa fa-btn fa-cog"></i>
                                       Configuración
+                                      <span class="badge badge-info">Proximamente</span>
                                     </a>
                                     <p class="lead"></p>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

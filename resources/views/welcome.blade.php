@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/img/icono.png">
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
         <title>MagicDreams</title>
 
         <!-- Fonts -->
@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">{{ __('Home') }}</a>
                     @else
                         <a href="{{ route('login') }}">{{ __('Login') }}</a>
 
@@ -78,27 +78,18 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     MagicDreamsMC
                 </div>
 
                 <div class="links">
-                    <a href="/home">Inicio</a>
-                    <a href="https://magicdreamsmc.enjin.com/">Foro</a>
-                    <a href="http://mgdreamstienda.craftingstore.net/">Tienda</a>
-                    <a href="/votar">Votar</a>
-                    <a href="/nosotros">¿Quienes somos?</a>
-                    <a href="/contacto">Contacto</a>
-                    <form class="" action="/lang" method="post">
-                      {{ csrf_field() }}
-                      <label for="es">Español</label>
-                      <input type="radio" name="lang" value="es" id="es">
-                      <label for="en">English</label>
-                      <input type="radio" name="lang" value="en" id="en">
-                      <input type="submit" name="" value="{{ __('Accept') }}">
-                    </form>
+                    <a href="/home">{{__('Home')}}</a>
+                    <a href="https://magicdreamsmc.enjin.com/">{{__('Forum')}}</a>
+                    <a href="http://mgdreamstienda.craftingstore.net/">{{__('Shop')}}</a>
+                    <a href="/votar">{{__('Vote')}}</a>
+                    <a href="/nosotros">{{__('About us')}}</a>
+                    <a href="/contacto">{{__('Contact')}}</a>
                 </div>
             </div>
         </div>
