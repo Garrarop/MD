@@ -54,8 +54,10 @@
                         <p class="lead"></p>
                         <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/contacto">{{__('Contact')}}</a></li>
                         <p class="lead"></p>
-                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://play.mgdreamsmc.com:8123/#">Mapa</a></li>
+                        <li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="http://play.mgdreamsmc.com:1934/">Mapa</a></li>
                         <p class="lead"></p>
+                        <!--<li style="margin-right: 3px;" class="nav-item active"><a class="nav-link btn btn-outline-primary my-2 my-sm-0"  href="/calendario">Calendario de clases</a></li>
+                        <p class="lead"></p>-->
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -113,4 +115,4 @@
   </footer>
 </body>
 </html>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{{--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">--}}

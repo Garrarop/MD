@@ -29,11 +29,14 @@ Route::get('/success', function () {
     return view('success');
 });
 
-Route::get('lang/{locale}', function ($locale) {
+Route::get('/gracias', function () {
+    return view('gracias');
+});
+
+Route::get('en/home', function ($locale) {
     App::setLocale($locale);
     return view('welcome');
-    //
-})->where('name', 'es|en|ES|EN');
+});
 Auth::routes();
 /*
 Route::get('/home', 'HomeController@index')->name('home');
@@ -41,9 +44,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resultados', 'BusquedasController@buscar')->name('buscar');
 
 Route::get('/pruebas','PruebasController@prueba');
-*/
+
 Route::post('/contacto', 'PruebasController@mensaje');
-/*
+
 Route::get('/perfil/{id?}', 'UsuariosController@verPerfil')->name('Perfil');
 
 Route::get('/configuracion', 'UsuariosController@configuraciones')->name('config')->middleware(['auth']);

@@ -102,9 +102,9 @@
                         <div class="col-md-3">
                           <div class="card mb-4">
                             <img class=" card-img-top" width="250" src="img/staff/PrefectoH.jpeg" alt="Ministro">
-                            <h5 class="card-header bg-warning">PrefectoH - AngelTWD</h5>
+                            <h5 class="card-header bg-warning">JefeCasaH - AngelTWD</h5>
                             <div class="card-body">
-                              <p class="card-text text-justify">Angel James Grimes Grindelwald Martínez Scamander, sangre pura, jugador de quidditch y diestro en las artes oscuras, actual prefecto de Hufflepuff y futuro magizoologo.</p>
+                              <p class="card-text text-justify">Angel James Grimes Grindelwald Martínez Scamander, sangre pura, jugador de quidditch y diestro en las artes oscuras, actual jefe de casa de Hufflepuff y profesor de transformaciones.</p>
                             </div>
                             <div class="card-footer">
                               <button type="button" name="button" class="btn btn-outline-primary">Perfil</button>
@@ -115,9 +115,9 @@
                         <div class="col-md-3">
                           <div class="card mb-4">
                             <img class=" card-img-top" width="250" src="img/staff/PrefectoS.jpeg" alt="Ministro">
-                            <h5 class="card-header" style="background-color: #348548">PrefectoS - April_Wood</h5>
+                            <h5 class="card-header" style="background-color: #348548">JefaCasaS-April_Wood</h5>
                             <div class="card-body">
-                              <p class="card-text text-justify">April Riddle actual pefecta de Slytherin, sangre pura,futura profesora de CDCM.</p>
+                              <p class="card-text text-justify">April Riddle actual Jefa de casa de Slytherin, profesora de encantamientos.</p>
                             </div>
                             <div class="card-footer">
                               <button type="button" name="button" class="btn btn-outline-primary">Perfil</button>

@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                  <div class="alert alert-info"><i class="bx bx-bold">¡Atencion! El foro de esta página aún no está disponible. ¡Pero ya puedes registrarte! <br>En cuanto esté disponible se te enviara una notificación.</i></div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -15,8 +16,8 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-                                <small id="nameHelp" class="form-text text-muted">*Nombre real, tu nick lo pondrás más adelante.*</small>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" autofocus>
+                                <small id="nameHelp" class="form-text text-muted">*Nombre real*</small>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +30,7 @@
                             <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required>
+                                <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}">
 
 
                                 @if ($errors->has('lastname'))
@@ -41,10 +42,25 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="nick" class="col-md-4 col-form-label text-md-right">{{ __('Nick') }}:</label>
+
+                            <div class="col-md-6">
+                                <input id="nick" type="text" class="form-control{{ $errors->has('nick') ? ' is-invalid' : '' }}" name="nick" value="{{ old('nick') }}">
+                                <small id="nameHelp" class="form-text text-muted">*Distingue entre Mayúsculas*</small>
+
+                                @if ($errors->has('nick'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nick') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -58,7 +74,7 @@
                             <label for="pais" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="pais" type="text" class="form-control{{ $errors->has('pais') ? ' is-invalid' : '' }}" name="pais" value="{{ old('pais') }}" required>
+                                <input id="pais" type="text" class="form-control{{ $errors->has('pais') ? ' is-invalid' : '' }}" name="pais" value="{{ old('pais') }}">
 
 
                                 @if ($errors->has('pais'))
@@ -73,7 +89,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -87,7 +103,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}:</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
                             </div>
                         </div>
 
