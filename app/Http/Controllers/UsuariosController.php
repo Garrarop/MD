@@ -20,8 +20,10 @@ class UsuariosController extends Controller
           return redirect('/login');
         }
       }
-      $usuarios = DB::table('users')->select('id','name','PathImagen')->where('id', $id)->get();
+      //$usuarios = DB::table('users')->select('id','name','PathImagen')->where('id', $id)->get();
+      $usuarios = DB::select('call spGetPerfilUser(?);', [$id]);
       //echo $usuarios;
+      //print_r($usuarios);
       return view('perfil')->with('usuarios', $usuarios);
 
     }

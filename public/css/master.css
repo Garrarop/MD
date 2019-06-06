@@ -4,26 +4,68 @@ body{
 #ImgPerfil{
   max-width: 160px;
   border-radius: 100%;
-  border: solid 3px white;
 }
-
+#logo{
+  animation: cabeceo 5s cubic-bezier(0.4, 0, 1, 1) 1s infinite backwards reverse;
+  position: fixed;
+  left: 12%;
+}
 #prfList{
   text-align: center;
 }
 .py-4{
   min-height: 83vh;
 }
+#ColUserINFO{
+  padding: 0;
+}
 #prfList li{
   list-style: none;
+}
+#humo{
+  animation: humo-color 5s cubic-bezier(0.4, 0, 1, 1) 1s infinite backwards reverse;
+  max-width: 734px;
+  position: fixed;
+  left: 7%;
+  top: 168px;
 }
 #publicar{
   padding-left: 10px;
 }
-@media (max-width: 768){
-  #asd {
+@media (max-width: 425){
+  #UserINFO {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
   }
+}
+#ColUserINFO{
+  padding: 15px;
+}
+@keyframes cabeceo {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+@keyframes humo-color {
+0%{
+  filter: hue-rotate(0deg) blur(3px);
+  transform: rotate(0deg);
+}
+50%{
+  filter: hue-rotate(650deg) blur(2px);
+  transform: rotate(-10deg);
+}
+100%{
+  filter: hue-rotate(0deg) blur(3px);
+  transform: rotate(0deg);
+}
+
 }

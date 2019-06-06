@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.welcome');
 });
 Route::get('/nosotros', function () {
     return view('nosotros');
@@ -38,7 +38,7 @@ Route::get('en/home', function ($locale) {
     return view('welcome');
 });
 Auth::routes();
-/*
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/resultados', 'BusquedasController@buscar')->name('buscar');
@@ -60,4 +60,3 @@ Route::post('/redes', 'UsuariosController@redes');
 Route::post('/lang', 'PruebasController@lang');
 
 Route::get('/completarPerfil','UsuariosController@completarPerfil')->name('Completar')->middleware(['auth']);
-*/

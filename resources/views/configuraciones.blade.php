@@ -69,7 +69,7 @@
                             <div class="input-group-prepend">
                               <label for="lastname" class="input-group-text">Apellido:</label>
                             </div>
-                            <input type="text" id="lastname" name="lastname" class="form-control">
+                            <input type="text" id="lastname" name="lastname" class="form-control" value="{{ Auth::user()->lastname }}">
                           </div>
                         </div>
                         <div class="form-group">
