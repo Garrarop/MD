@@ -1,0 +1,45 @@
+#nav-up{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input, select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#sesion input{
+  display: block;
+  margin-bottom: 3px;
+}
+#nav-menu{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0px;
+}
+.nav-btn{
+  background-color: #57b04d;
+  border: none;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}
+#sesion-btn{
+  background-color: #57b04d;
+  border: none;
+  color: white;
+  padding: 1px 65px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}

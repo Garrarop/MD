@@ -1,14 +1,16 @@
 body{
-  background:url(../img/ma1.jpeg) fixed;
+  background:url(../img/hog.jpg) fixed;
 }
 #ImgPerfil{
   max-width: 160px;
   border-radius: 100%;
 }
 #logo{
-  animation: cabeceo 5s cubic-bezier(0.4, 0, 1, 1) 1s infinite backwards reverse;
-  position: fixed;
-  left: 12%;
+  width: 272px;
+  animation: cabeceo 10s cubic-bezier(0.57, 1.82, 0.59, -0.41) 0s infinite backwards;
+  position: absolute;
+  left: calc(50% - 272px/2);
+  top: calc(5%);
 }
 #prfList{
   text-align: center;
@@ -22,15 +24,54 @@ body{
 #prfList li{
   list-style: none;
 }
+#scroll{
+  position: absolute;
+  top: 80vh;
+  right: 50px;
+  color: #fafafa;
+}
+#mouse{
+  border: 2px #fafafa solid;
+  padding: 5px;
+  border-radius: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+#wheel{
+  border: 2px #fafafa solid;
+  animation: cabeceo-a 3s cubic-bezier(0.4, 0, 0.2, 1) 0s infinite backwards;
+  margin: 7px;
+  padding-top: 5px;
+  margin-bottom: 30px;
+  background-color: #fafafa;
+  border-radius: 50px;
+}
 #humo{
-  animation: humo-color 5s cubic-bezier(0.4, 0, 1, 1) 1s infinite backwards reverse;
-  max-width: 734px;
-  position: fixed;
-  left: 7%;
-  top: 168px;
+  width: 272px;
+  animation: humo-color 7s cubic-bezier(0, 0, 0, 0) 0s infinite backwards;
+  position: absolute;
+  left: calc(50% - 315px/2);
+  top: calc(7%);
 }
 #publicar{
   padding-left: 10px;
+}
+#contenido{
+  margin-top: 100vh;
+}
+@media (min-width: 1023px) {
+  #logo{
+    width: 400px;
+    left: calc(50% - 400px/2);
+    top: calc(7%);
+  }
+  #humo{
+    width: 400px;
+    left: calc(50% - 450px/2);
+    top: calc(9%);
+  }
 }
 @media (max-width: 425){
   #UserINFO {
@@ -39,33 +80,34 @@ body{
     flex-direction: row;
     align-items: center;
   }
+  #humo{
+    width: 100px;
+  }
 }
 #ColUserINFO{
   padding: 15px;
 }
 @keyframes cabeceo {
-  0% {
-    transform: translateY(100px);
-  }
   50% {
-    transform: translateY(25px);
-  }
-  100% {
     transform: translateY(100px);
+  }
+}
+@keyframes cabeceo-a {
+  50% {
+    transform: translateY(3px);
   }
 }
 @keyframes humo-color {
 0%{
-  filter: hue-rotate(0deg) blur(3px);
-  transform: rotate(0deg);
+  filter: hue-rotate(0deg) blur(3px) opacity(83%);
+  /*transform: rotate(360deg);*/
 }
 50%{
-  filter: hue-rotate(650deg) blur(2px);
-  transform: rotate(-10deg);
+  filter: hue-rotate(650deg) blur(2px) opacity(85%);
+  transform: scale(1.3);
 }
 100%{
-  filter: hue-rotate(0deg) blur(3px);
-  transform: rotate(0deg);
+  filter: hue-rotate(0deg) blur(3px) opacity(87%);
 }
 
 }

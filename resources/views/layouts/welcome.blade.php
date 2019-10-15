@@ -18,16 +18,30 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ asset('js/Pruebas.js') }}"></script>
 </head>
 <body>
-  <br><br>
-  <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-4 align-content-center">
-          <img id="humo" src="{{ asset('img/humo.png') }}" alt="">
-          <img id="logo" src="{{ asset('img/LogoMD.png') }}" alt="">
+  <div class="LogoMD">
+    <img id="humo" src="{{ asset('img/humo5.png') }}" alt="">
+    <img id="logo" src="{{ asset('img/LogoMD.png') }}" alt="">
+    <div id="scroll" onclick="rolar()">
+      <div id="mouse">
+        <div id="wheel">
         </div>
+      </div>
+      <p>Scroll to continue</p>
     </div>
   </div>
+  <div id="contenido">
+    <img id="logo1" src="{{ asset('img/LogoMD.png') }}" style="padding-top: 10px;" alt="">
+    <img id="logo2" src="{{ asset('img/LogoMD.png') }}" alt="">
+    <img id="logo3" src="{{ asset('img/LogoMD.png') }}" alt="">
+  </div>
+
+{{--<footer class="footer" style="background: rgba(154, 147, 164, 0.36);">
+    <div class="footer-copyright text-center py-3"><p>MagicDreams es un servidor de minecraft creado para los fans de Harry Potter. MagicDreams no está afiliado con J.K. Rowling, WizardingWorld, WarnerBross u otra entidad.</p> © 2019 Copyright:
+      <a href="#"> MagicDreamsMC</a>
+    </div>
+  </footer>--}}
 </body>
 </html>
